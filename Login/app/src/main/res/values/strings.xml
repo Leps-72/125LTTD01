@@ -1,0 +1,16 @@
+<resources>
+    <!-- Từ màn hình đăng nhập -->
+    <string name="app_name319">Login</string>  <!-- Thêm dòng này, thay "Login" bằng tên bạn muốn cho ứng dụng -->
+    <string name="username_hint319">User Name</string>
+    <string name="password_hint319">Password</string>
+    <string name="login_button319">LOGIN ME</string>
+    <string name="lost_password319">Lost password?</string>
+
+    <!-- Từ màn hình hồ sơ -->
+    <string name="back_button">Back</string>
+    <string name="profile_name">Profile Name: 125 clients</string>
+    <string name="email">Email: mail@mail.com</string>
+    <string name="phone">Phone: +99 999 555 222</string>
+    <string name="skype">Skype: me007</string>
+    <string name="web">Web: cssauthor.com</string>
+</resources>
