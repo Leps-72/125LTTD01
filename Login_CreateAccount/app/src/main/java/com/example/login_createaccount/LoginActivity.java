@@ -39,11 +39,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        // Xử lý nút Create Account
-//        btnCreateAccount.setOnClickListener(v -> {
-//            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
-//            startActivity(intent);
-//        });
+        // Xử lý nút Create Account
+        btnCreateAccount.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+            startActivity(intent);
+        });
 
         // Forgot Password
         tvForgotPassword.setOnClickListener(v -> {
