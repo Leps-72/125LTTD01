@@ -1,55 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
-    android:background="#FFFFFF">
+    android:background="#F5F5F5">
 
     <!-- Logo -->
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="24dp"/>
+        android:scaleType="centerInside"
+        android:layout_marginBottom="32dp"/>
 
     <!-- Tiêu đề -->
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="24sp"
+        android:text="Welcome Back"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"/>
+        android:textColor="#212121"
+        android:layout_marginBottom="32dp"
+        app:fontFamily="sans-serif-medium"/>
 
     <!-- Nhập email -->
-    <EditText
-        android:id="@+id/editEmail"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#0288D1"
+        app:hintTextColor="#0288D1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#212121"
+            android:textColorHint="#757575"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Nhập password -->
-    <EditText
-        android:id="@+id/editPassword"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#0288D1"
+        app:hintTextColor="#0288D1"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#212121"
+            android:textColorHint="#757575"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Nút Login -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Login"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#0288D1"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="8dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp"/>
 
     <!-- Forgot password -->
     <TextView
@@ -57,14 +88,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:textColor="#0000FF"
-        android:layout_marginBottom="24dp"/>
+        android:textSize="14sp"
+        android:textColor="#0288D1"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp"/>
 
     <!-- Nút Create Account -->
     <Button
         android:id="@+id/btnCreateAccount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create Account"/>
+        android:layout_height="56dp"
+        android:text="Create Account"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="8dp"
+        android:elevation="4dp"/>
 
 </LinearLayout>
