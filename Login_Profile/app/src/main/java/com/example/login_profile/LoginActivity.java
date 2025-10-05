@@ -22,7 +22,6 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
-        // Sự kiện nút Login
         btnLogin.setOnClickListener(v -> {
             String user = edtUsername.getText().toString().trim();
             String pass = edtPassword.getText().toString().trim();
@@ -32,11 +31,10 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Đăng nhập thành công cho user: " + user, Toast.LENGTH_SHORT).show();
 
-                // 👉 Chuyển sang màn hình Profile và gửi username
                 Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                 intent.putExtra("username", user);
                 startActivity(intent);
-                finish(); // Kết thúc LoginActivity để quay lại bằng nút trong Profile
+                finish();
             }
         });
         btnLogin.setOnClickListener(v -> {
