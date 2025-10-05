@@ -1,6 +1,7 @@
 package com.example.login_profile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,10 +17,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Ánh xạ view
         edtUsername = findViewById(R.id.edtUsername);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
+        // Sự kiện nút Login
         btnLogin.setOnClickListener(v -> {
             String user = edtUsername.getText().toString().trim();
             String pass = edtPassword.getText().toString().trim();
@@ -28,6 +31,29 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Đăng nhập thành công cho user: " + user, Toast.LENGTH_SHORT).show();
+
+                // 👉 Chuyển sang màn hình Profile và gửi username
+                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                intent.putExtra("username", user);
+                startActivity(intent);
+                finish(); // Kết thúc LoginActivity để quay lại bằng nút trong Profile
+            }
+        });
+        btnLogin.setOnClickListener(v -> {
+            String user = edtUsername.getText().toString().trim();
+            String pass = edtPassword.getText().toString().trim();
+
+            if (user.isEmpty() || pass.isEmpty()) {
+                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+            } else if (user.equals("admin") && pass.equals("123")) {
+                Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                intent.putExtra("username", user);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(this, "Sai tên đăng nhập hoặc mật khẩu", Toast.LENGTH_SHORT).show();
             }
         });
     }
