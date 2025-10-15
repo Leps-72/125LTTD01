@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="F9F9FB">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Welcome to BTGK"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/editName"
+        android:hint="Nhập tên của bạn"
+        android:drawableStart="@android:drawable/ic_menu_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#90CAF9"
+        android:background="@android:drawable/edit_text"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAge"
+        android:hint="Nhập tuổi"
+        android:inputType="number"
+        android:drawableStart="@android:drawable/ic_menu_myplaces"
+        android:padding="12dp"
+        android:backgroundTint="#90CAF9"
+        android:background="@android:drawable/edit_text"/>
+    <Button
+        android:id="@+id/btnSend"
+        android:text="Gui thong tin"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#90CAF9"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"/>
+
+
+
+
+</LinearLayout>
