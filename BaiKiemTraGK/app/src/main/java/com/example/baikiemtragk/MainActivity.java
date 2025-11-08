@@ -31,12 +31,18 @@ public class MainActivity extends AppCompatActivity {
                 String age = editAge.getText().toString().trim();
 
                 if(name.isEmpty() || age.isEmpty()) {
-                    Toast.makeText(this, "Vui long nhap thong tin");
+                    Toast.makeText(this, "Vui long nhap thong tin", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 try{
                     int tuoi = Integer.parseInt(age);
-                    Intent intent = new Intent(MainActivity.this, la)
+                    Intent intent = new Intent(MainActivity.this, Profile.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("age", age);
+                    startActivities(intent);
+                catch{
+                        Toast.makeText(this, "Toi phia la so", Toast.LENGTH_SHORT).show();
+                    }
 
         });
     }
